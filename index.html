@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis: Transformasi Digital Dealer Mobil Bekas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-line {
+            position: relative;
+            flex-grow: 1;
+            height: 2px;
+            background-color: #A9D1F0;
+        }
+        .flow-line::after {
+            content: '►';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #0072F0;
+            font-size: 16px;
+        }
+        .flow-box {
+            border-color: #0072F0;
+            background-color: white;
+            color: #00449E;
+        }
+        .flow-role {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            background-color: #005BC6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="text-[#00449E]">
+
+    <div class="max-w-7xl mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#00449E] uppercase tracking-wide">Transformasi Digital</h1>
+            <p class="text-xl md:text-2xl text-[#005BC6] mt-2">Studi Kasus: Modernisasi Proses Jual Beli Mobil Bekas</p>
+        </header>
+
+        <section id="problem" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Tantangan dalam Sistem Konvensional</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-6xl">⏱️</span>
+                    <h3 class="text-xl font-bold mt-4">Proses Lambat</h3>
+                    <p class="mt-2 text-gray-600">Pengecekan dan administrasi manual memakan waktu berjam-jam, terutama saat ada antrian.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-6xl">🔒</span>
+                    <h3 class="text-xl font-bold mt-4">Risiko Keamanan</h3>
+                    <p class="mt-2 text-gray-600">Kurangnya validasi dokumen terpusat meningkatkan risiko penipuan dan transaksi tidak aman.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-6xl">📉</span>
+                    <h3 class="text-xl font-bold mt-4">Harga Tidak Transparan</h3>
+                    <p class="mt-2 text-gray-600">Penawaran harga oleh dealer seringkali rendah dan tidak memiliki dasar yang jelas bagi pemilik mobil.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-6xl">📢</span>
+                    <h3 class="text-xl font-bold mt-4">Pemasaran Terbatas</h3>
+                    <p class="mt-2 text-gray-600">Mengandalkan iklan koran atau media sosial yang tidak terstruktur membatasi jangkauan calon pembeli.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Analisis Kelemahan Sistem (PIECES Framework)</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-center text-gray-700 mb-6 max-w-3xl mx-auto">Analisis PIECES menunjukkan bagaimana sistem lama gagal dalam enam area kritis. Grafik di bawah ini membandingkan perkiraan waktu yang dibutuhkan untuk proses kunci antara metode manual dan solusi digital yang diusulkan, menyoroti inefisiensi yang signifikan.</p>
+                <div class="chart-container">
+                    <canvas id="piecesChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution-flow" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Solusi: Alur Kerja Digital Terintegrasi</h2>
+             <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">Sistem baru menciptakan alur kerja yang transparan dan efisien, menghubungkan Pemilik, Dealer, dan Pembeli dalam satu platform. Proses yang tadinya rumit dan terputus-putus kini menjadi lancar dan terkoordinasi.</p>
+                <div class="flex space-x-2">
+                    <div class="flex items-center justify-center p-2 rounded-l-lg flow-role" style="background-color: #58A5F0;">Owner</div>
+                    <div class="flex-1 p-2 border-l-4 border-[#58A5F0] bg-gray-50 rounded-r-lg space-y-4">
+                        <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">1. Input Data & Dokumen via Portal</div><div class="flow-line"></div></div>
+                    </div>
+                </div>
+                <div class="flex space-x-2 mt-2">
+                    <div class="flex items-center justify-center p-2 flow-role">Dealer</div>
+                    <div class="flex-1 p-4 border-l-4 border-[#005BC6] bg-gray-50 rounded-r-lg space-y-4">
+                        <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">2. Verifikasi Administrasi</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">3. Pemeriksaan Mobil & Iklan Digital</div><div class="flow-line"></div></div>
+                         <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">4. Dampingi Test Drive</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">5. Fasilitasi Negosiasi</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">6. Buat Laporan Penjualan</div></div>
+                    </div>
+                </div>
+                 <div class="flex space-x-2 mt-2">
+                    <div class="flex items-center justify-center p-2 rounded-l-lg flow-role" style="background-color: #A9D1F0; color:#00449E">Customer</div>
+                    <div class="flex-1 p-4 border-l-4 border-[#A9D1F0] bg-gray-50 rounded-r-lg space-y-4">
+                       <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">7. Lihat Mobil di Galeri Online</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">8. Lakukan Test Drive</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">9. Setujui Harga</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">10. Terima Mobil & Dokumen</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Fitur Utama Sistem Baru</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <h3 class="text-xl font-bold mb-4">Distribusi Manfaat Fitur</h3>
+                    <p class="text-gray-700 mb-4">Setiap fitur dirancang untuk mengatasi masalah spesifik, berkontribusi pada efisiensi sistem secara keseluruhan.</p>
+                    <div class="chart-container !h-80 md:!h-96">
+                        <canvas id="featuresDonutChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <h3 class="text-xl font-bold mb-4">Dampak Peningkatan Proses</h3>
+                     <p class="text-gray-700 mb-4">Solusi digital memberikan peningkatan drastis di berbagai aspek, dari efisiensi hingga layanan pelanggan.</p>
+                    <div class="chart-container !h-80 md:!h-96">
+                        <canvas id="impactRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 py-6 border-t border-[#A9D1F0]">
+            <p class="text-[#005BC6]">&copy; 2025 Analisis Desain Sistem Informasi. Infografis ini adalah representasi visual dari studi kasus.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const sharedChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#00449E',
+                        font: { size: 14 }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#005BC6' },
+                    grid: { display: false }
+                },
+                y: {
+                    ticks: { color: '#005BC6' },
+                    grid: { color: '#A9D1F0' }
+                }
+            }
+        };
+
+        const piecesCtx = document.getElementById('piecesChart').getContext('2d');
+        const piecesLabels = ['Pendataan & Administrasi', 'Pemasaran & Iklan', 'Proses Transaksi', 'Kontrol Inventaris'];
+        new Chart(piecesCtx, {
+            type: 'bar',
+            data: {
+                labels: piecesLabels.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Proses Manual (Menit)',
+                        data: [45, 120, 30, 60],
+                        backgroundColor: '#58A5F0',
+                        borderColor: '#0072F0',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Proses Digital (Menit)',
+                        data: [5, 10, 5, 2],
+                        backgroundColor: '#0072F0',
+                        borderColor: '#005BC6',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                ...sharedChartOptions,
+                plugins: {
+                    ...sharedChartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Perbandingan Waktu Proses: Manual vs. Digital',
+                        color: '#00449E',
+                        font: { size: 18, weight: 'bold' }
+                    }
+                }
+            }
+        });
+
+        const featuresDonutCtx = document.getElementById('featuresDonutChart').getContext('2d');
+        new Chart(featuresDonutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Portal Pemilik', 'Galeri Digital', 'Manajemen Inventaris', 'Transaksi Aman'],
+                datasets: [{
+                    label: 'Kontribusi Fitur',
+                    data: [30, 25, 25, 20],
+                    backgroundColor: ['#00449E', '#0072F0', '#58A5F0', '#A9D1F0'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#00449E', font: { size: 14 } }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const impactRadarCtx = document.getElementById('impactRadarChart').getContext('2d');
+        new Chart(impactRadarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Performance', 'Information', 'Economy', 'Control', 'Efficiency', 'Service'],
+                datasets: [
+                    {
+                        label: 'Sistem Lama',
+                        data: [3, 4, 3, 2, 3, 4],
+                        fill: true,
+                        backgroundColor: 'rgba(88, 165, 240, 0.2)',
+                        borderColor: '#58A5F0',
+                        pointBackgroundColor: '#58A5F0',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#58A5F0'
+                    },
+                    {
+                        label: 'Sistem Baru',
+                        data: [9, 8, 9, 9, 10, 9],
+                        fill: true,
+                        backgroundColor: 'rgba(0, 114, 240, 0.2)',
+                        borderColor: '#0072F0',
+                        pointBackgroundColor: '#0072F0',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#0072F0'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                     legend: {
+                        position: 'bottom',
+                        labels: { color: '#00449E', font: { size: 14 } }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#A9D1F0' },
+                        grid: { color: '#A9D1F0' },
+                        pointLabels: {
+                            color: '#00449E',
+                            font: { size: 12, weight: 'bold' }
+                        },
+                        ticks: {
+                            color: '#005BC6',
+                            backdropColor: 'rgba(240, 244, 248, 0.75)',
+                            stepSize: 2
+                        },
+                        min: 0,
+                        max: 10
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
