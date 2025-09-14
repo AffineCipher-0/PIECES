@@ -75,6 +75,11 @@
             color: #90b8d8;
             font-size: 1.5rem;
             font-weight: bold;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0.5rem;
         }
     </style>
 </head>
@@ -82,30 +87,30 @@
 
     <div class="max-w-7xl mx-auto p-4 md:p-8">
 
-        <header class="text-center mb-12">
+        <header class="text-center mb-16">
             <h1 class="text-4xl md:text-6xl font-black text-[#00449E] uppercase tracking-wide">Transformasi Digital</h1>
             <p class="text-xl md:text-2xl text-[#005BC6] mt-2">Studi Kasus: Modernisasi Proses Jual Beli Mobil Bekas</p>
         </header>
 
-        <section id="problem" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">Tantangan dalam Sistem Konvensional</h2>
+        <section id="problem" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Tantangan dalam Sistem Konvensional</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
                     <span class="text-6xl">⏱️</span>
                     <h3 class="text-xl font-bold mt-4">Proses Lambat</h3>
                     <p class="mt-2 text-gray-600">Pengecekan dan administrasi manual memakan waktu berjam-jam, terutama saat ada antrian.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
                     <span class="text-6xl">🔒</span>
                     <h3 class="text-xl font-bold mt-4">Risiko Keamanan</h3>
                     <p class="mt-2 text-gray-600">Kurangnya validasi dokumen terpusat meningkatkan risiko penipuan dan transaksi tidak aman.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
                     <span class="text-6xl">📉</span>
                     <h3 class="text-xl font-bold mt-4">Harga Tidak Transparan</h3>
                     <p class="mt-2 text-gray-600">Penawaran harga oleh dealer seringkali rendah dan tidak memiliki dasar yang jelas bagi pemilik mobil.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
                     <span class="text-6xl">📢</span>
                     <h3 class="text-xl font-bold mt-4">Pemasaran Terbatas</h3>
                     <p class="mt-2 text-gray-600">Mengandalkan iklan koran atau media sosial yang tidak terstruktur membatasi jangkauan calon pembeli.</p>
@@ -113,169 +118,282 @@
             </div>
         </section>
 
-        <section id="analysis" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">Analisis Kelemahan Sistem (PIECES Framework)</h2>
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">Analisis PIECES membantu mengidentifikasi masalah dari enam sudut pandang kritis. Berikut adalah rincian masalah yang ditemukan dalam sistem konvensional:</p>
+        <section id="analysis" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Analisis Kelemahan Sistem (PIECES Framework)</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+                <p class="text-center text-gray-700 mb-10 max-w-3xl mx-auto">Analisis PIECES membantu mengidentifikasi masalah dari enam sudut pandang kritis. Berikut adalah rincian masalah yang ditemukan dalam sistem konvensional:</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 text-left">
-                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 text-left">
+                    <div class="bg-slate-50 rounded-lg border-l-4 border-[#0072F0] p-4">
                         <h4 class="font-bold text-lg text-[#00449E]">Performance (Kinerja)</h4>
-                        <p class="text-gray-600">Proses manual yang sangat lambat menyebabkan antrian panjang dan waktu tunggu yang tidak efisien bagi semua pihak.</p>
+                        <p class="text-gray-600 mt-1">Proses manual yang sangat lambat menyebabkan antrian panjang dan waktu tunggu yang tidak efisien bagi semua pihak.</p>
                     </div>
-                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                    <div class="bg-slate-50 rounded-lg border-l-4 border-[#0072F0] p-4">
                         <h4 class="font-bold text-lg text-[#00449E]">Information (Informasi)</h4>
-                        <p class="text-gray-600">Informasi tidak efektif karena jangkauan iklan terbatas dan data stok mobil tidak terpusat untuk akses real-time.</p>
+                        <p class="text-gray-600 mt-1">Informasi tidak efektif karena jangkauan iklan terbatas dan data stok mobil tidak terpusat untuk akses real-time.</p>
                     </div>
-                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                    <div class="bg-slate-50 rounded-lg border-l-4 border-[#0072F0] p-4">
                         <h4 class="font-bold text-lg text-[#00449E]">Economy (Ekonomi)</h4>
-                        <p class="text-gray-600">Menimbulkan biaya tidak perlu seperti cetak iklan berulang dan rentan terhadap kesalahan pencatatan finansial.</p>
+                        <p class="text-gray-600 mt-1">Menimbulkan biaya tidak perlu seperti cetak iklan berulang dan rentan terhadap kesalahan pencatatan finansial.</p>
                     </div>
-                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                    <div class="bg-slate-50 rounded-lg border-l-4 border-[#0072F0] p-4">
                         <h4 class="font-bold text-lg text-[#00449E]">Control (Kendali)</h4>
-                        <p class="text-gray-600">Pengendalian terhadap aset dan data sangat lemah tanpa database terpusat, membuka celah penipuan atau kehilangan data.</p>
+                        <p class="text-gray-600 mt-1">Pengendalian terhadap aset dan data sangat lemah tanpa database terpusat, membuka celah penipuan atau kehilangan data.</p>
                     </div>
-                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                    <div class="bg-slate-50 rounded-lg border-l-4 border-[#0072F0] p-4">
                         <h4 class="font-bold text-lg text-[#00449E]">Efficiency (Efisiensi)</h4>
-                        <p class="text-gray-600">Banyak terjadi pengulangan pekerjaan (redundansi), di mana data yang sama harus ditulis berulang kali di berbagai formulir.</p>
+                        <p class="text-gray-600 mt-1">Banyak terjadi pengulangan pekerjaan (redundansi), di mana data yang sama harus ditulis berulang kali di berbagai formulir.</p>
                     </div>
-                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                    <div class="bg-slate-50 rounded-lg border-l-4 border-[#0072F0] p-4">
                         <h4 class="font-bold text-lg text-[#00449E]">Service (Layanan)</h4>
-                        <p class="text-gray-600">Kualitas layanan pelanggan rendah akibat proses yang lama, informasi terbatas, dan kurangnya transparansi.</p>
+                        <p class="text-gray-600 mt-1">Kualitas layanan pelanggan rendah akibat proses yang lama, informasi terbatas, dan kurangnya transparansi.</p>
                     </div>
                 </div>
 
-                <div class="my-8 border-t border-gray-200"></div>
+                <div class="my-10 border-t border-gray-200"></div>
 
-                <p class="text-center text-gray-700 mb-6 max-w-3xl mx-auto">Grafik di bawah ini memvisualisasikan dampak inefisiensi tersebut dengan membandingkan perkiraan waktu proses kunci antara sistem manual dan solusi digital.</p>
+                <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">Grafik di bawah ini memvisualisasikan dampak inefisiensi tersebut dengan membandingkan perkiraan waktu proses kunci antara sistem manual dan solusi digital.</p>
                 <div class="chart-container">
                     <canvas id="piecesChart"></canvas>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-gray-200">
-                    <h3 class="text-xl font-bold text-center mb-4">Dasar Perhitungan Estimasi Waktu</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-xl font-bold text-center mb-6">Dasar Perhitungan Estimasi Waktu</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 text-gray-700">
                         <div>
                             <h4 class="font-bold text-[#005BC6]">Pendataan & Administrasi (45 vs 5 menit)</h4>
-                            <p>Proses manual (form kertas, cek fisik, catat di buku) memakan waktu lama. Dengan sistem digital, admin hanya perlu verifikasi data yang sudah diinput oleh pemilik via portal.</p>
+                            <p class="mt-1">Proses manual (form kertas, cek fisik, catat di buku) memakan waktu lama. Dengan sistem digital, admin hanya perlu verifikasi data yang sudah diinput oleh pemilik via portal.</p>
                         </div>
                         <div>
                             <h4 class="font-bold text-[#005BC6]">Pemasaran & Iklan (120 vs 10 menit)</h4>
-                            <p>Waktu manual merepresentasikan total usaha (desain, kirim ke media cetak, tunggu terbit). Proses digital hanya membutuhkan beberapa menit untuk unggah dan publikasi online.</p>
+                            <p class="mt-1">Waktu manual merepresentasikan total usaha (desain, kirim ke media cetak, tunggu terbit). Proses digital hanya membutuhkan beberapa menit untuk unggah dan publikasi online.</p>
                         </div>
                         <div>
                             <h4 class="font-bold text-[#005BC6]">Proses Transaksi (30 vs 5 menit)</h4>
-                            <p>Transaksi manual (kuitansi, rekap buku, pembayaran tunai) lebih lambat. Transaksi digital (transfer, notifikasi otomatis) tercatat secara instan.</p>
+                            <p class="mt-1">Transaksi manual (kuitansi, rekap buku, pembayaran tunai) lebih lambat. Transaksi digital (transfer, notifikasi otomatis) tercatat secara instan.</p>
                         </div>
                         <div>
                             <h4 class="font-bold text-[#005BC6]">Kontrol Inventaris (60 vs 2 menit)</h4>
-                            <p>Pengecekan stok manual secara periodik sangat tidak efisien. Dasbor digital menyajikan data inventaris akurat yang dapat diakses kapan saja dalam hitungan menit.</p>
+                            <p class="mt-1">Pengecekan stok manual secara periodik sangat tidak efisien. Dasbor digital menyajikan data inventaris akurat yang dapat diakses kapan saja dalam hitungan menit.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="solution-flow" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">Solusi: Alur Kerja Digital Terintegrasi</h2>
-             <div class="bg-white rounded-lg shadow-md p-6">
-                <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">Sistem baru menciptakan alur kerja yang transparan dan efisien, menghubungkan Pemilik, Dealer, dan Pembeli dalam satu platform. Proses yang tadinya rumit dan terputus-putus kini menjadi lancar dan terkoordinasi.</p>
-                <div class="space-y-4 text-sm">
-                    <div class="flow-lane">
-                        <div class="flow-label" style="background-color: #7ED321;">Owner</div>
-                        <div class="flow-steps">
-                            <div class="flow-step"><b>1.</b> Dokumen Mobil Lengkap</div>
-                            <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>13.</b> Harga Diperiksa</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>14.</b> Harga Disetujui</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>19.</b> Laporan Diterima</div>
+        <section id="solution-flow" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Solusi: Alur Kerja Digital Terintegrasi</h2>
+                 <div class="bg-white rounded-lg shadow-lg p-6 md:p-10">
+                    <p class="text-center text-gray-700 mb-10 max-w-3xl mx-auto">Sistem baru menciptakan alur kerja yang transparan dan efisien, menghubungkan Pemilik, Dealer, dan Pembeli dalam satu platform. Proses yang tadinya rumit dan terputus-putus kini menjadi lancar dan terkoordinasi.</p>
+                    <div class="space-y-6 text-sm">
+                        <div class="flow-lane">
+                            <div class="flow-label" style="background-color: #7ED321;">Owner</div>
+                            <div class="flow-steps !p-4 gap-4">
+                                <div class="flow-step flex-1"><b>1.</b> Dokumen Mobil Lengkap</div>
+                                <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step flex-1"><b>13.</b> Harga Diperiksa</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step flex-1"><b>14.</b> Harga Disetujui</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step flex-1"><b>19.</b> Laporan Diterima</div>
+                            </div>
+                        </div>
+
+                        <div class="flow-lane">
+                            <div class="flow-label" style="background-color: #F5A623;">Dealer</div>
+                            <div class="flow-steps !p-4 gap-2">
+                                <div class="flow-step"><b>2.</b> Administrasi</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>3.</b> Pengiklanan</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>5.</b> Pemeriksaan Mobil</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>7.</b> Memberikan Spesifikasi</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>8.</b> Didampingi Petugas</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>12.</b> Negosiasi</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>15.</b> Menerima Laporan</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>17.</b> Cek Data Customer</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>18.</b> Membuat Laporan</div>
+                            </div>
+                        </div>
+
+                        <div class="flow-lane">
+                            <div class="flow-label" style="background-color: #4A90E2;">Customer</div>
+                            <div class="flow-steps !p-4 gap-2">
+                                <div class="flow-step"><b>4.</b> Datang ke Dealer</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>6.</b> Melihat Mobil</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>9.</b> Test Drive</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>10.</b> Evaluasi</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>11.</b> Melihat Harga</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>16.</b> Menyetujui Harga</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>20.</b> Membeli</div>
+                                 <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                                <div class="flow-step"><b>21.</b> Menerima Mobil</div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="flow-lane">
-                        <div class="flow-label" style="background-color: #F5A623;">Dealer</div>
-                        <div class="flow-steps">
-                            <div class="flow-step"><b>2.</b> Administrasi</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>3.</b> Pengiklanan</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>5.</b> Pemeriksaan Mobil</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>7.</b> Memberikan Spesifikasi</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>8.</b> Didampingi Petugas</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>12.</b> Negosiasi</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>15.</b> Menerima Laporan Harga</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>17.</b> Check Data Customer</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>18.</b> Laporan Penjualan</div>
+                    <!-- Penjelasan Alur Kerja - RAPI -->
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <h3 class="text-2xl font-bold text-center mb-8">Deskripsi Alur Kerja</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Step 1 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #7ED321;"><span>1</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#7ED321]">Owner:</b> Pemilik mobil menyiapkan seluruh dokumen penting (STNK, BPKB, faktur) untuk memastikan legalitas kendaraan.</p></div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>2</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Staf administrasi menerima dan memasukkan data serta dokumen dari pemilik ke dalam sistem digital.</p></div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>3</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Setelah verifikasi, mobil otomatis diiklankan di platform online dealer dengan foto dan spesifikasi.</p></div>
+                            </div>
+                             <!-- Step 4 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>4</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Calon pembeli yang tertarik iklan online datang ke dealer untuk melihat unit secara langsung.</p></div>
+                            </div>
+                            <!-- Step 5 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>5</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Tim mekanik melakukan inspeksi mendetail pada mobil untuk memastikan kondisi dan kualitasnya.</p></div>
+                            </div>
+                             <!-- Step 6 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>6</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Calon pembeli melihat dan membandingkan berbagai jenis mobil yang tersedia di showroom.</p></div>
+                            </div>
+                             <!-- Step 7 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>7</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Petugas penjualan memberikan penjelasan rinci mengenai spesifikasi teknis dan fitur mobil.</p></div>
+                            </div>
+                            <!-- Step 8 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>8</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Petugas mendampingi pelanggan selama memeriksa mobil untuk menjawab semua pertanyaan.</p></div>
+                            </div>
+                             <!-- Step 9 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>9</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Calon pembeli melakukan test drive untuk merasakan performa dan kenyamanan mobil.</p></div>
+                            </div>
+                            <!-- Step 10 -->
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                                <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>10</span></div>
+                                <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Berdasarkan test drive, pembeli mengevaluasi apakah mobil sesuai dengan harapannya.</p></div>
+                            </div>
+                            <!-- Step 11 -->
+                           <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                               <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>11</span></div>
+                               <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Calon pembeli memeriksa harga yang ditawarkan untuk mobil yang telah diuji coba.</p></div>
+                           </div>
+                           <!-- Step 12 -->
+                          <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                              <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>12</span></div>
+                              <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Proses negosiasi harga terjadi antara pembeli dan tim penjualan untuk mencapai kesepakatan.</p></div>
+                          </div>
+                          <!-- Step 13 -->
+                         <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #7ED321;"><span>13</span></div>
+                             <div><p class="text-gray-700"><b class="text-[#7ED321]">Owner:</b> Pemilik mobil menerima notifikasi penawaran harga akhir dari hasil negosiasi dan memeriksanya.</p></div>
+                         </div>
+                         <!-- Step 14 -->
+                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                            <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #7ED321;"><span>14</span></div>
+                            <div><p class="text-gray-700"><b class="text-[#7ED321]">Owner:</b> Jika setuju, pemilik memberikan persetujuan atas harga jual tersebut melalui sistem.</p></div>
                         </div>
+                        <!-- Step 15 -->
+                       <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                           <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>15</span></div>
+                           <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Dealer menerima konfirmasi persetujuan dari pemilik dan melanjutkan proses transaksi.</p></div>
+                       </div>
+                       <!-- Step 16 -->
+                      <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                          <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>16</span></div>
+                          <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Pembeli memberikan persetujuan akhir terhadap harga yang telah disepakati bersama.</p></div>
+                      </div>
+                      <!-- Step 17 -->
+                     <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                         <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>17</span></div>
+                         <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Administrasi memverifikasi kelengkapan data diri dan dokumen yang diperlukan dari pembeli.</p></div>
+                     </div>
+                     <!-- Step 18 -->
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #F5A623;"><span>18</span></div>
+                        <div><p class="text-gray-700"><b class="text-[#F5A623]">Dealer:</b> Sistem otomatis menghasilkan laporan penjualan yang kemudian diberikan kepada pembeli.</p></div>
                     </div>
-
-                    <div class="flow-lane">
-                        <div class="flow-label" style="background-color: #4A90E2;">Customer</div>
-                        <div class="flow-steps">
-                            <div class="flow-step"><b>4.</b> Datang ke Tempat</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>6.</b> Melihat Mobil</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>9.</b> Test Drive</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>11.</b> Melihat Harga</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>16.</b> Menyetujui Harga</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>20.</b> Membeli</div>
-                             <span class="flow-arrow">&rarr;</span>
-                            <div class="flow-step"><b>21.</b> Menerima Mobil</div>
+                     <!-- Step 19 -->
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #7ED321;"><span>19</span></div>
+                        <div><p class="text-gray-700"><b class="text-[#7ED321]">Owner:</b> Pemilik asli menerima laporan akhir bahwa mobilnya telah berhasil terjual.</p></div>
+                    </div>
+                    <!-- Step 20 -->
+                   <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                       <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>20</span></div>
+                       <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Pembeli melakukan pembayaran sesuai dengan nominal pada laporan penjualan.</p></div>
+                   </div>
+                   <!-- Step 21 -->
+                  <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-gray-200">
+                      <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full font-bold text-white" style="background-color: #4A90E2;"><span>21</span></div>
+                      <div><p class="text-gray-700"><b class="text-[#4A90E2]">Customer:</b> Setelah lunas, pembeli secara resmi menerima unit mobil beserta seluruh dokumennya.</p></div>
+                  </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
-        <section id="features" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">Fitur Utama Sistem Baru</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6">
+        <section id="features" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Fitur Utama Sistem Baru</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
                     <h3 class="text-xl font-bold text-center mb-4">Distribusi Manfaat Fitur</h3>
-                    <p class="text-center text-gray-700 mb-4">Setiap fitur dirancang untuk mengatasi masalah spesifik, berkontribusi pada efisiensi sistem secara keseluruhan.</p>
+                    <p class="text-center text-gray-700 mb-6">Setiap fitur dirancang untuk mengatasi masalah spesifik, berkontribusi pada efisiensi sistem secara keseluruhan.</p>
                     <div class="chart-container !h-80 md:!h-96">
                         <canvas id="featuresDonutChart"></canvas>
                     </div>
                      <div class="mt-8 pt-6 border-t border-gray-200 text-left">
-                        <h4 class="font-bold text-lg text-center mb-4">Penjelasan Kontribusi Fitur</h4>
-                        <ul class="space-y-3 text-gray-700">
-                            <li><b>Portal Pemilik (30%):</b> Berperan paling besar karena menjadi gerbang efisiensi, memotong langsung proses pendataan manual yang lambat.</li>
-                            <li><b>Galeri Digital (25%):</b> Solusi langsung untuk masalah informasi dan layanan, memberikan jangkauan pasar dan pengalaman pelanggan yang lebih baik.</li>
-                            <li><b>Manajemen Inventaris (25%):</b> Menjadi inti dari kendali sistem, menghilangkan masalah data tidak akurat dan pengecekan manual yang memakan waktu.</li>
-                            <li><b>Transaksi Aman (20%):</b> Menjawab masalah ekonomi dan kendali dengan meminimalkan risiko kesalahan finansial dan meningkatkan keamanan.</li>
-                        </ul>
-                    </div>
+                         <h4 class="font-bold text-lg text-center mb-4">Penjelasan Kontribusi Fitur</h4>
+                         <ul class="space-y-3 text-gray-700">
+                             <li><b>Portal Pemilik (30%):</b> Berperan paling besar karena menjadi gerbang efisiensi, memotong langsung proses pendataan manual yang lambat.</li>
+                             <li><b>Galeri Digital (25%):</b> Solusi langsung untuk masalah informasi dan layanan, memberikan jangkauan pasar dan pengalaman pelanggan yang lebih baik.</li>
+                             <li><b>Manajemen Inventaris (25%):</b> Menjadi inti dari kendali sistem, menghilangkan masalah data tidak akurat dan pengecekan manual yang memakan waktu.</li>
+                             <li><b>Transaksi Aman (20%):</b> Menjawab masalah ekonomi dan kendali dengan meminimalkan risiko kesalahan finansial dan meningkatkan keamanan.</li>
+                         </ul>
+                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
                     <h3 class="text-xl font-bold text-center mb-4">Dampak Peningkatan Proses</h3>
-                     <p class="text-center text-gray-700 mb-4">Solusi digital memberikan peningkatan drastis di berbagai aspek, dari efisiensi hingga layanan pelanggan.</p>
+                     <p class="text-center text-gray-700 mb-6">Solusi digital memberikan peningkatan drastis di berbagai aspek, dari efisiensi hingga layanan pelanggan.</p>
                     <div class="chart-container !h-80 md:!h-96">
                         <canvas id="impactRadarChart"></canvas>
                     </div>
                     <div class="mt-8 pt-6 border-t border-gray-200 text-left">
                         <h4 class="font-bold text-lg text-center mb-4">Penjelasan Dampak Peningkatan (Skor 0-10)</h4>
                          <ul class="space-y-3 text-gray-700">
-                            <li><b>Sistem Lama (Area Dalam):</b> Area yang kecil menunjukkan skor rendah di semua aspek PIECES, terutama pada Kendali (2/10) dan Kinerja (3/10), memvisualisasikan kelemahan utama.</li>
-                            <li><b>Sistem Baru (Area Luar):</b> Area yang luas menunjukkan peningkatan signifikan dan menyeluruh. Skor tinggi seperti Efisiensi (10/10) dan Kinerja (9/10) membuktikan solusi berhasil mengatasi masalah inti.</li>
-                        </ul>
+                             <li><b>Sistem Lama (Area Dalam):</b> Area yang kecil menunjukkan skor rendah di semua aspek PIECES, terutama pada Kendali (2/10) dan Kinerja (3/10), memvisualisasikan kelemahan utama.</li>
+                             <li><b>Sistem Baru (Area Luar):</b> Area yang luas menunjukkan peningkatan signifikan dan menyeluruh. Skor tinggi seperti Efisiensi (10/10) dan Kinerja (9/10) membuktikan solusi berhasil mengatasi masalah inti.</li>
+                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="text-center mt-12 py-6 border-t border-[#A9D1F0]">
+        <footer class="text-center mt-16 py-8 border-t border-[#A9D1F0]">
             <p class="text-[#005BC6]">&copy; 2025 Analisis Desain Sistem Informasi. Infografis ini adalah representasi visual dari studi kasus.</p>
         </footer>
 
