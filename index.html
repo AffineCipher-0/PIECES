@@ -28,32 +28,53 @@
                 height: 400px;
             }
         }
-        .flow-line {
-            position: relative;
-            flex-grow: 1;
-            height: 2px;
-            background-color: #A9D1F0;
-        }
-        .flow-line::after {
-            content: '►';
-            position: absolute;
-            right: -8px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #0072F0;
-            font-size: 16px;
-        }
         .flow-box {
             border-color: #0072F0;
             background-color: white;
             color: #00449E;
+            border-left: 4px solid;
         }
-        .flow-role {
+        .flow-lane {
+            display: flex;
+            align-items: stretch;
+        }
+        .flow-label {
             writing-mode: vertical-rl;
             text-orientation: mixed;
             transform: rotate(180deg);
-            background-color: #005BC6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 4rem;
             color: white;
+            font-weight: bold;
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
+        .flow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: none;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .flow-step {
+            background-color: white;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            margin: 0.5rem;
+            text-align: center;
+        }
+        .flow-arrow {
+            color: #90b8d8;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -106,24 +127,86 @@
             <h2 class="text-3xl font-bold text-center mb-8">Solusi: Alur Kerja Digital Terintegrasi</h2>
              <div class="bg-white rounded-lg shadow-md p-6">
                 <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">Sistem baru menciptakan alur kerja yang transparan dan efisien, menghubungkan Pemilik, Dealer, dan Pembeli dalam satu platform. Proses yang tadinya rumit dan terputus-putus kini menjadi lancar dan terkoordinasi.</p>
-                <div class="flex space-x-2">
-                    <div class="flex items-center justify-center p-2 rounded-l-lg flow-role" style="background-color: #58A5F0;">Owner</div>
-                    <div class="flex-1 p-2 border-l-4 border-[#58A5F0] bg-gray-50 rounded-r-lg space-y-4">
-                        <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">1. Input Data & Dokumen via Portal</div><div class="flow-line"></div></div>
+                <div class="space-y-4 text-sm">
+                    <div class="flow-lane">
+                        <div class="flow-label" style="background-color: #7ED321;">Owner</div>
+                        <div class="flow-steps">
+                            <div class="flow-step"><b>1.</b> Dokumen Mobil Lengkap</div>
+                            <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>13.</b> Harga Diperiksa</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>14.</b> Harga Disetujui</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>19.</b> Laporan Diterima</div>
+                        </div>
+                    </div>
+
+                    <div class="flow-lane">
+                        <div class="flow-label" style="background-color: #F5A623;">Dealer</div>
+                        <div class="flow-steps">
+                            <div class="flow-step"><b>2.</b> Administrasi</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>3.</b> Pengiklanan</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>5.</b> Pemeriksaan Mobil</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>7.</b> Memberikan Spesifikasi</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>8.</b> Didampingi Petugas</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>12.</b> Negosiasi</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>15.</b> Menerima Laporan Harga</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>17.</b> Check Data Customer</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>18.</b> Laporan Penjualan</div>
+                        </div>
+                    </div>
+
+                    <div class="flow-lane">
+                        <div class="flow-label" style="background-color: #4A90E2;">Customer</div>
+                        <div class="flow-steps">
+                            <div class="flow-step"><b>4.</b> Datang ke Tempat</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>6.</b> Melihat Mobil</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>9.</b> Test Drive</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>11.</b> Melihat Harga</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>16.</b> Menyetujui Harga</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>20.</b> Membeli</div>
+                             <span class="flow-arrow">&rarr;</span>
+                            <div class="flow-step"><b>21.</b> Menerima Mobil</div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex space-x-2 mt-2">
-                    <div class="flex items-center justify-center p-2 flow-role">Dealer</div>
-                    <div class="flex-1 p-4 border-l-4 border-[#005BC6] bg-gray-50 rounded-r-lg space-y-4">
-                        <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">2. Verifikasi Administrasi</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">3. Pemeriksaan Mobil & Iklan Digital</div><div class="flow-line"></div></div>
-                         <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">4. Dampingi Test Drive</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">5. Fasilitasi Negosiasi</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">6. Buat Laporan Penjualan</div></div>
-                    </div>
+            </div>
+        </section>
+
+        <section id="additional-info" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Konteks dan Landasan Proyek</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Stakeholder & Peranannya</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><b>Pemilik Sistem (System Owner):</b> Sponsor eksekutif, bertanggung jawab atas pendanaan dan meninjau keuntungan bisnis dari sistem.</li>
+                        <li><b>Pengguna Sistem (System User):</b> Pelanggan (owner & customer) yang menggunakan sistem sehari-hari. Fokus pada fungsionalitas dan kemudahan penggunaan.</li>
+                        <li><b>Desainer Sistem (System Designer):</b> Spesialis teknis yang merancang arsitektur, database, dan antarmuka sistem.</li>
+                         <li><b>Pembangun Sistem (System Builder):</b> Programmer dan teknisi yang membangun sistem berdasarkan desain yang telah dibuat.</li>
+                        <li><b>Analis Sistem (System Analyst):</b> Menjembatani kebutuhan bisnis dengan solusi teknis, memastikan sistem yang dibangun dapat menyelesaikan masalah nyata.</li>
+                    </ul>
                 </div>
-                 <div class="flex space-x-2 mt-2">
-                    <div class="flex items-center justify-center p-2 rounded-l-lg flow-role" style="background-color: #A9D1F0; color:#00449E">Customer</div>
-                    <div class="flex-1 p-4 border-l-4 border-[#A9D1F0] bg-gray-50 rounded-r-lg space-y-4">
-                       <div class="flex items-center space-x-4"><div class="p-3 rounded-lg shadow-sm flow-box">7. Lihat Mobil di Galeri Online</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">8. Lakukan Test Drive</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">9. Setujui Harga</div><div class="flow-line"></div><div class="p-3 rounded-lg shadow-sm flow-box">10. Terima Mobil & Dokumen</div></div>
-                    </div>
+                 <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Metodologi Pengembangan</h3>
+                    <p class="text-gray-700 mb-4">Proyek ini mengadopsi prinsip dari beberapa metodologi untuk memastikan pengembangan yang cepat namun terstruktur. Pendekatan yang digunakan adalah kombinasi dari:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><b>Waterfall:</b> Untuk perencanaan awal yang jelas dari analisis kebutuhan hingga desain sistem secara keseluruhan.</li>
+                        <li><b>Prototyping:</b> Membuat model kerja (working system) dari antarmuka pengguna untuk mendapatkan feedback cepat dari pengguna.</li>
+                         <li><b>Rapid Application Development (RAD):</b> Menekankan siklus pengembangan yang singkat untuk fitur-fitur utama agar sistem cepat dirasakan manfaatnya.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -338,3 +421,4 @@
     </script>
 </body>
 </html>
+
