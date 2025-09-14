@@ -115,10 +115,63 @@
 
         <section id="analysis" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8">Analisis Kelemahan Sistem (PIECES Framework)</h2>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <p class="text-center text-gray-700 mb-6 max-w-3xl mx-auto">Analisis PIECES menunjukkan bagaimana sistem lama gagal dalam enam area kritis. Grafik di bawah ini membandingkan perkiraan waktu yang dibutuhkan untuk proses kunci antara metode manual dan solusi digital yang diusulkan, menyoroti inefisiensi yang signifikan.</p>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">Analisis PIECES membantu mengidentifikasi masalah dari enam sudut pandang kritis. Berikut adalah rincian masalah yang ditemukan dalam sistem konvensional:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 text-left">
+                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                        <h4 class="font-bold text-lg text-[#00449E]">Performance (Kinerja)</h4>
+                        <p class="text-gray-600">Proses manual yang sangat lambat menyebabkan antrian panjang dan waktu tunggu yang tidak efisien bagi semua pihak.</p>
+                    </div>
+                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                        <h4 class="font-bold text-lg text-[#00449E]">Information (Informasi)</h4>
+                        <p class="text-gray-600">Informasi tidak efektif karena jangkauan iklan terbatas dan data stok mobil tidak terpusat untuk akses real-time.</p>
+                    </div>
+                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                        <h4 class="font-bold text-lg text-[#00449E]">Economy (Ekonomi)</h4>
+                        <p class="text-gray-600">Menimbulkan biaya tidak perlu seperti cetak iklan berulang dan rentan terhadap kesalahan pencatatan finansial.</p>
+                    </div>
+                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                        <h4 class="font-bold text-lg text-[#00449E]">Control (Kendali)</h4>
+                        <p class="text-gray-600">Pengendalian terhadap aset dan data sangat lemah tanpa database terpusat, membuka celah penipuan atau kehilangan data.</p>
+                    </div>
+                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                        <h4 class="font-bold text-lg text-[#00449E]">Efficiency (Efisiensi)</h4>
+                        <p class="text-gray-600">Banyak terjadi pengulangan pekerjaan (redundansi), di mana data yang sama harus ditulis berulang kali di berbagai formulir.</p>
+                    </div>
+                    <div class="border-l-4 border-[#0072F0] pl-4 py-2">
+                        <h4 class="font-bold text-lg text-[#00449E]">Service (Layanan)</h4>
+                        <p class="text-gray-600">Kualitas layanan pelanggan rendah akibat proses yang lama, informasi terbatas, dan kurangnya transparansi.</p>
+                    </div>
+                </div>
+
+                <div class="my-8 border-t border-gray-200"></div>
+
+                <p class="text-center text-gray-700 mb-6 max-w-3xl mx-auto">Grafik di bawah ini memvisualisasikan dampak inefisiensi tersebut dengan membandingkan perkiraan waktu proses kunci antara sistem manual dan solusi digital.</p>
                 <div class="chart-container">
                     <canvas id="piecesChart"></canvas>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-bold text-center mb-4">Dasar Perhitungan Estimasi Waktu</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+                        <div>
+                            <h4 class="font-bold text-[#005BC6]">Pendataan & Administrasi (45 vs 5 menit)</h4>
+                            <p>Proses manual (form kertas, cek fisik, catat di buku) memakan waktu lama. Dengan sistem digital, admin hanya perlu verifikasi data yang sudah diinput oleh pemilik via portal.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#005BC6]">Pemasaran & Iklan (120 vs 10 menit)</h4>
+                            <p>Waktu manual merepresentasikan total usaha (desain, kirim ke media cetak, tunggu terbit). Proses digital hanya membutuhkan beberapa menit untuk unggah dan publikasi online.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#005BC6]">Proses Transaksi (30 vs 5 menit)</h4>
+                            <p>Transaksi manual (kuitansi, rekap buku, pembayaran tunai) lebih lambat. Transaksi digital (transfer, notifikasi otomatis) tercatat secara instan.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#005BC6]">Kontrol Inventaris (60 vs 2 menit)</h4>
+                            <p>Pengecekan stok manual secara periodik sangat tidak efisien. Dasbor digital menyajikan data inventaris akurat yang dapat diakses kapan saja dalam hitungan menit.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -186,46 +239,37 @@
             </div>
         </section>
 
-        <section id="additional-info" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">Konteks dan Landasan Proyek</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold mb-4">Stakeholder & Peranannya</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><b>Pemilik Sistem (System Owner):</b> Sponsor eksekutif, bertanggung jawab atas pendanaan dan meninjau keuntungan bisnis dari sistem.</li>
-                        <li><b>Pengguna Sistem (System User):</b> Pelanggan (owner & customer) yang menggunakan sistem sehari-hari. Fokus pada fungsionalitas dan kemudahan penggunaan.</li>
-                        <li><b>Desainer Sistem (System Designer):</b> Spesialis teknis yang merancang arsitektur, database, dan antarmuka sistem.</li>
-                         <li><b>Pembangun Sistem (System Builder):</b> Programmer dan teknisi yang membangun sistem berdasarkan desain yang telah dibuat.</li>
-                        <li><b>Analis Sistem (System Analyst):</b> Menjembatani kebutuhan bisnis dengan solusi teknis, memastikan sistem yang dibangun dapat menyelesaikan masalah nyata.</li>
-                    </ul>
-                </div>
-                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold mb-4">Metodologi Pengembangan</h3>
-                    <p class="text-gray-700 mb-4">Proyek ini mengadopsi prinsip dari beberapa metodologi untuk memastikan pengembangan yang cepat namun terstruktur. Pendekatan yang digunakan adalah kombinasi dari:</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><b>Waterfall:</b> Untuk perencanaan awal yang jelas dari analisis kebutuhan hingga desain sistem secara keseluruhan.</li>
-                        <li><b>Prototyping:</b> Membuat model kerja (working system) dari antarmuka pengguna untuk mendapatkan feedback cepat dari pengguna.</li>
-                         <li><b>Rapid Application Development (RAD):</b> Menekankan siklus pengembangan yang singkat untuk fitur-fitur utama agar sistem cepat dirasakan manfaatnya.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <section id="features" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8">Fitur Utama Sistem Baru</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <h3 class="text-xl font-bold mb-4">Distribusi Manfaat Fitur</h3>
-                    <p class="text-gray-700 mb-4">Setiap fitur dirancang untuk mengatasi masalah spesifik, berkontribusi pada efisiensi sistem secara keseluruhan.</p>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">Distribusi Manfaat Fitur</h3>
+                    <p class="text-center text-gray-700 mb-4">Setiap fitur dirancang untuk mengatasi masalah spesifik, berkontribusi pada efisiensi sistem secara keseluruhan.</p>
                     <div class="chart-container !h-80 md:!h-96">
                         <canvas id="featuresDonutChart"></canvas>
                     </div>
+                     <div class="mt-8 pt-6 border-t border-gray-200 text-left">
+                        <h4 class="font-bold text-lg text-center mb-4">Penjelasan Kontribusi Fitur</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><b>Portal Pemilik (30%):</b> Berperan paling besar karena menjadi gerbang efisiensi, memotong langsung proses pendataan manual yang lambat.</li>
+                            <li><b>Galeri Digital (25%):</b> Solusi langsung untuk masalah informasi dan layanan, memberikan jangkauan pasar dan pengalaman pelanggan yang lebih baik.</li>
+                            <li><b>Manajemen Inventaris (25%):</b> Menjadi inti dari kendali sistem, menghilangkan masalah data tidak akurat dan pengecekan manual yang memakan waktu.</li>
+                            <li><b>Transaksi Aman (20%):</b> Menjawab masalah ekonomi dan kendali dengan meminimalkan risiko kesalahan finansial dan meningkatkan keamanan.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <h3 class="text-xl font-bold mb-4">Dampak Peningkatan Proses</h3>
-                     <p class="text-gray-700 mb-4">Solusi digital memberikan peningkatan drastis di berbagai aspek, dari efisiensi hingga layanan pelanggan.</p>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">Dampak Peningkatan Proses</h3>
+                     <p class="text-center text-gray-700 mb-4">Solusi digital memberikan peningkatan drastis di berbagai aspek, dari efisiensi hingga layanan pelanggan.</p>
                     <div class="chart-container !h-80 md:!h-96">
                         <canvas id="impactRadarChart"></canvas>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-200 text-left">
+                        <h4 class="font-bold text-lg text-center mb-4">Penjelasan Dampak Peningkatan (Skor 0-10)</h4>
+                         <ul class="space-y-3 text-gray-700">
+                            <li><b>Sistem Lama (Area Dalam):</b> Area yang kecil menunjukkan skor rendah di semua aspek PIECES, terutama pada Kendali (2/10) dan Kinerja (3/10), memvisualisasikan kelemahan utama.</li>
+                            <li><b>Sistem Baru (Area Luar):</b> Area yang luas menunjukkan peningkatan signifikan dan menyeluruh. Skor tinggi seperti Efisiensi (10/10) dan Kinerja (9/10) membuktikan solusi berhasil mengatasi masalah inti.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
